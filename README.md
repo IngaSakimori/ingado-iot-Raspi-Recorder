@@ -1,14 +1,10 @@
 Inga-Do Type IoT Raspi-Recorder
 
-♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯  
-♯  Inga-Do Type IoT ♯  
-♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯♯  
-
 　　　ヘヘヘ  
 　＜（・∀・）＞  
 　　　ＶＶＶ  
  Piyo-Piyo Fortress  
-
+copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved
 
 *説明  
 ラズベリーパイにカメラユニットを取り付け、起動すると自動で録画してくれるレコーダーです  
@@ -17,7 +13,7 @@ Gmailと連動して、録画開始や動作異常についてメール通知す
 Raspbian Stretchでこのレポジトリをクローンして、「00_initial_copy.sh」を実行すれば、すべての設定ファイルの配置が行われます。  
 
 *動作要件  
- ハードウェア
+ ハードウェア  
   Raspberry PI Zero/Zero W およびカメラユニット  
   32GB以上のMicroSDカード  
  ソフトウェア  
