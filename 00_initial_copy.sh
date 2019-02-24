@@ -16,6 +16,28 @@ echo "　　　ＶＶＶ　　　　"
 echo " Piyo-Piyo Fortress "
 echo "copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved"
 
+echo "Please enable CAMERA,SSH,VNC from raspi-config"
+
+sleep 1s
+
+echo "initial update"
+
+apt update
+
+echo "install some packages"
+
+apt install vim-gtk ssmtp mailutils mpack bc lxshortcut xrdp -y
+
+echo "install sysstat. wait few minutes. select Yes"
+
+apt install sysstat -y
+
+echo "enable xrdp. you can access RDP"
+
+systemctl enable xrdp
+
+echo "set clipboard=unnamedplus" >> ~/.vimrc
+
 echo "exec initial copy"
 
 mkdir -p /opt/ingado-iot-camera/rec
@@ -24,6 +46,8 @@ mkdir -p /opt/ingado-iot-camera/rec_h264
 mkdir -p /opt/ingado-iot-camera/rec_convert/tmp
 chown -R pi:pi opt/ingado-iot-camera
 chmod -R 777 opt/ingado-iot-camera
+mv -fv opt/ingado-iot-camera/*.sh /opt/ingado-iot-camera
+mv -fv opt/ingado-iot-camera/*.conf /opt/ingado-iot-camera
 
 
 chmod 755 boot/config.txt
@@ -77,6 +101,8 @@ chmod 644 usr/share/rpd-wallpaper/ingado-iot.jpg
 chown root:root usr/share/rpd-wallpaper/ingado-iot.jpg
 mv -fv usr/share/rpd-wallpaper/ingado-iot.jpg /usr/share/rpd-wallpaper/ingado-iot.jpg
 
+mkdir -p /home/pi/.config/pcmanfm/LXDE-pi/
+chown -R pi:pi /home/pi/.config/pcmanfm/LXDE-pi/
 chmod 644 home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
 chown pi:pi home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
 mv -fv home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf /home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
@@ -95,4 +121,3 @@ echo "select 7 Advanced Options"
 echo "select A1 Expand Filesystem"
 echo "System Reboot"
 echo "Rec process will auto start"
-
