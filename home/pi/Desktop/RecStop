@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=
+Name[ja_JP]=
+Exec=sudo /opt/ingado-iot-camera/9_kill_raspi_rec.sh
+Comment[ja_JP]=
+StartupNotify=true
