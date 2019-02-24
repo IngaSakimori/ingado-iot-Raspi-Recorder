@@ -22,6 +22,11 @@ Raspbian Stretchでこのレポジトリをクローンして、「00_initial_co
 *セットアップ方法  
 Raspbian StretchをクリーンインストールしたRaspberry PIで、任意のディレクトリにこのレポジトリをクローンするか  
 ZIPファイルでダウンロードして、/tmpなどに解凍してください。  
+
+$ cd /tmp
+$ sudo git clone https://github.com/IngaSakimori/ingado-iot-Raspi-Recorder.git
+$ sudo cd ingado-iot-Raspi-Recorder
+
 次に以下のコマンドを実行してください  
 
 $ sudo chmod 755 ./00_initial_copy.sh  
