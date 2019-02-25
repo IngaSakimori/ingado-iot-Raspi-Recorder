@@ -1,7 +1,7 @@
-# 　　　ヘヘヘ    
-# 　＜（・∀・）＞  
-# 　　　ＶＶＶ  
-# Piyo-Piyo Fortress  
+　　　ヘヘヘ    
+　＜（・∀・）＞  
+　　　ＶＶＶ  
+Piyo-Piyo Fortress  
   
 # Inga-Do Type IoT Raspi-Recorder  
 ラズベリーパイにカメラユニットを取り付け、起動すると自動で録画してくれるレコーダーです  
