@@ -23,8 +23,16 @@ MicroSD Card (Recommend over 32GB)
 Raspbian Stretch Offical Image  
   
 # Setup  
-Raspbian StretchをクリーンインストールしたRaspberry PIで、任意のディレクトリにこのレポジトリをクローンするか  
+Raspbian StretchをクリーンインストールしたRaspberry PIで、raspi-configを実行し、「CAMERA」を有効にしてください。
+任意のディレクトリにこのレポジトリをクローンするか  
 ZIPファイルでダウンロードして、/tmpなどに解凍して、セットアップスクリプトを実行してください。  
+  
+## Enable CAMERA
+  
+$ sudo raspi-config  
+  
+Enable CAMERA Unit.  
+
   
 ## Clone  
   
