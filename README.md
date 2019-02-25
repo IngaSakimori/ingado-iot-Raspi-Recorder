@@ -59,8 +59,8 @@ https://www.slideshare.net/IngaSakimori/c95raspberry-pi-zero-w
 2nd, wait few minutes.  
 3rd, Recording start automatically.  
   
-## move recording files
-Insert USB Memory(Formatted "FAT32" and Named Volume lavel "RASPI").  
+## Move recorded files
+Insert USB Memory(Formatted "FAT32" and Named Volume label "RASPI").  
 Wait about 20 minutes.  
 Automatically moved recording files.  
 (cron job runs background)  
