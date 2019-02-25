@@ -16,30 +16,30 @@ Sample Video(motorcycle helmet mount)
 https://twitter.com/IngaSakimori/status/1076787382295261184  
   
 # Dependency  
- H/W  
-  Raspberry PI Zero/Zero W and Camera Unit  
-  MicroSD Card (Recommend over 32GB)  
- S/W  
-  Raspbian Stretch Offical Image  
+## H/W  
+### Raspberry PI Zero/Zero W and Camera Unit  
+### MicroSD Card (Recommend over 32GB)  
+## S/W  
+### Raspbian Stretch Offical Image  
   
 # Setup  
 Raspbian StretchをクリーンインストールしたRaspberry PIで、任意のディレクトリにこのレポジトリをクローンするか  
 ZIPファイルでダウンロードして、/tmpなどに解凍して、セットアップスクリプトを実行してください。  
   
-Setup Command  
+## Clone  
   
 $ cd /tmp  
 $ sudo git clone https://github.com/IngaSakimori/ingado-iot-Raspi-Recorder.git  
 $ sudo cd ingado-iot-Raspi-Recorder  
   
 次に以下のコマンドを実行してください  
-Next Command  
+## Run Initial Script  
   
 $ sudo chmod 755 ./00_initial_copy.sh  
 $ sudo ./00_initial_copy.sh  
   
-OS設定ファイルも含めて上書きしますので、他の用途に使用中のRaspberry PIではセットアップしないでください  
-Caution! Setup script will overwrite OS Setting.  
+*OS設定ファイルも含めて上書きしますので、他の用途に使用中のRaspberry PIではセットアップしないでください*  
+*Caution! Setup script will overwrite OS Setting.*  
   
 # Usage  
 以下の資料を参照してください。これはコミケ95で頒布した際の資料です  
@@ -54,11 +54,12 @@ https://www.slideshare.net/IngaSakimori/c95raspberry-pi-zero-w
 数十分ごとに自動転送プロセスが走ります。また起動開始時にも録画中ファイルをコンバートした上で、自動転送プロセスが走ります  
 （「exFAT」にも対応していますが、「FAT32」がオススメです。なお、フォーマットはWindowsやMACのフォーマッターではなく、SD Associationよりフリーで配布されている「SD Card Formatter」でフォーマットしてください）  
   
-This is Auto Recorder. It's simple.  
+## This is Auto Recorder. It's simple.  
 1st, Power on.  
 2nd, wait few minutes.  
 3rd, Recording start automatically.  
   
+## move recording files
 Insert USB Memory(Formatted "FAT32" and Named Volume lavel "RASPI").  
 Wait about 20 minutes.  
 Automatically moved recording files.  
