@@ -17,10 +17,10 @@ https://twitter.com/IngaSakimori/status/1076787382295261184
   
 # Dependency  
 ## H/W  
-### Raspberry PI Zero/Zero W and Camera Unit  
-### MicroSD Card (Recommend over 32GB)  
+Raspberry PI Zero/Zero W and Camera Unit  
+MicroSD Card (Recommend over 32GB)  
 ## S/W  
-### Raspbian Stretch Offical Image  
+Raspbian Stretch Offical Image  
   
 # Setup  
 Raspbian StretchをクリーンインストールしたRaspberry PIで、任意のディレクトリにこのレポジトリをクローンするか  
