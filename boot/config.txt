@@ -57,7 +57,7 @@ hdmi_force_hotplug=1
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
 start_x=1
-gpu_mem=64
+gpu_mem=128
 dtparam=watchdog=on
 
 # for ACT LED

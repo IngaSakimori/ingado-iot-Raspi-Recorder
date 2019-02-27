@@ -79,7 +79,7 @@ chmod 644 etc/logrotate.d/rsyslog
 chmod 644 etc/modprobe.d/bcm2835-wdt.conf
 chmod 644 etc/ssmtp/ssmtp.conf
 chmod 644 etc/systemd/system.conf
-chmod 644 etc/wpa_supplicant/wpa_supplicant.conf
+#chmod 644 etc/wpa_supplicant/wpa_supplicant.conf
 
 chown root:root etc/cron.d/sysstat
 chown root:root etc/default/sysstat
@@ -87,7 +87,7 @@ chown root:root etc/logrotate.d/rsyslog
 chown root:root etc/modprobe.d/bcm2835-wdt.conf
 chown root:root etc/ssmtp/ssmtp.conf
 chown root:root etc/systemd/system.conf
-chown root:root etc/wpa_supplicant/wpa_supplicant.conf
+#chown root:root etc/wpa_supplicant/wpa_supplicant.conf
 
 mv -fv etc/cron.d/sysstat /etc/cron.d/sysstat
 mv -fv etc/default/sysstat /etc/default/sysstat
@@ -95,7 +95,7 @@ mv -fv etc/logrotate.d/rsyslog /etc/logrotate.d/rsyslog
 mv -fv etc/modprobe.d/bcm2835-wdt.conf /etc/modprobe.d/bcm2835-wdt.conf
 mv -fv etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf
 mv -fv etc/systemd/system.conf /etc/systemd/system.conf
-mv -fv etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+#mv -fv etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 chmod 644 home/pi/Desktop/MoveToUSB_Memory
 chmod 644 home/pi/Desktop/RecStop
