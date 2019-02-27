@@ -17,37 +17,43 @@ echo " Piyo-Piyo Fortress "
 echo "copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved"
 
 echo "Please enable CAMERA,SSH,VNC from raspi-config"
+read -p "Hit enter: "
 
 sleep 1s
 
 echo "initial update"
+echo " "
 
 apt update
 
 echo "install some packages"
+echo " "
 
-apt install vim-gtk ssmtp mailutils mpack bc lxshortcut xrdp -y
+apt install vim-gtk ssmtp mailutils mpack bc lxshortcut xrdp firefox-esr -y
 
-echo "install sysstat. wait few minutes. select Yes"
+echo "install sysstat. wait few minutes. select [Yes] "
+read -p "Hit enter: "
 
 apt install sysstat -y
 
 echo "enable xrdp. you can access RDP"
+echo " "
 
 systemctl enable xrdp
 
 echo "set clipboard=unnamedplus" >> ~/.vimrc
 
 echo "exec initial copy"
+echo " "
 
 mkdir -p /opt/ingado-iot-camera/rec
 mkdir -p /opt/ingado-iot-camera/rec_convert
 mkdir -p /opt/ingado-iot-camera/rec_h264
 mkdir -p /opt/ingado-iot-camera/rec_convert/tmp
-chown -R pi:pi opt/ingado-iot-camera
-chmod -R 777 opt/ingado-iot-camera
 mv -fv opt/ingado-iot-camera/*.sh /opt/ingado-iot-camera
 mv -fv opt/ingado-iot-camera/*.conf /opt/ingado-iot-camera
+chown -R pi:pi /opt/ingado-iot-camera
+chmod -R 777 /opt/ingado-iot-camera
 
 chmod 755 boot/config.txt
 chown root:root boot/config.txt
@@ -118,10 +124,24 @@ mv -fv var/log/rec_error.log /var/log/rec_error.log
 mv -fv var/log/rec_script.log /var/log/rec_script.log
 
 echo "initial copy done!!"
-echo "Next...run"
-echo "command - sudo raspi-config"
-echo "select 7 Advanced Options"
-echo "select A1 Expand Filesystem"
-echo "System Reboot"
+echo " "
+
+echo "Next.."
+echo "1st, type command $ sudo raspi-config"
+echo "2nd, select 7 Advanced Options"
+echo "3rd, select A1 Expand Filesystem"
+echo "Final, System Reboot"
 echo "Rec process will auto start"
+echo " "
+
+echo "　　　ヘヘヘ　　　　"
+echo "　＜（・∀・）＞　　"
+echo "　　　ＶＶＶ　　　　"
+echo " Piyo-Piyo Fortress "
+echo "copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved"
+echo "GitHub https://github.com/IngaSakimori/ingado-iot-Raspi-Recorder"
+echo "Twitter @IngaSakimori"
+echo " "
+echo "Thank you!!（・∀・）b"
+
 
