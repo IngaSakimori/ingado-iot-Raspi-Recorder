@@ -17,11 +17,12 @@ echo " Piyo-Piyo Fortress "
 echo "copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved"
 
 echo "Please enable CAMERA,SSH,VNC from raspi-config"
+
 read -p "Hit enter: "
 
 sleep 1s
 
-echo "initial update"
+echo "initial apt update"
 echo " "
 
 apt update
@@ -31,7 +32,7 @@ echo " "
 
 apt install vim-gtk ssmtp mailutils mpack bc lxshortcut xrdp firefox-esr -y
 
-echo "install sysstat. wait few minutes. select [Yes] "
+echo "install sysstat. wait few minutes. If you are asked , select [Yes] "
 read -p "Hit enter: "
 
 apt install sysstat -y
@@ -42,6 +43,8 @@ echo " "
 systemctl enable xrdp
 
 echo "set clipboard=unnamedplus" >> ~/.vimrc
+
+echo "xserver-command=X -s 0 dpms" >> /etc/lightdm/lightdm.conf
 
 echo "exec initial copy"
 echo " "
@@ -134,6 +137,19 @@ echo "Final, System Reboot"
 echo "Rec process will auto start"
 echo " "
 
+echo "How to move recording files"
+echo "1st, Format [FAT32] your USB Memory. Modify Volune Label [RASPI]"
+echo "2nd, Insert USB Memory.Wait about 20 miniutes"
+echo "Final, Recording files will move automatically"
+echo " "
+
+echo "Convenient usage.."
+echo "1st, Get [Gmail Address] for sending only"
+echo "2nd, Enable Two-step authentication. Get [APP Password] for windows mail program"
+echo "3rd, Modify /opt/ingado-iot-camera/common.conf"
+echo "Notify when [Startup],[Rec start],[DISK FULL],[Find Faliure]"
+echo " "
+
 echo "　　　ヘヘヘ　　　　"
 echo "　＜（・∀・）＞　　"
 echo "　　　ＶＶＶ　　　　"
@@ -143,5 +159,7 @@ echo "GitHub https://github.com/IngaSakimori/ingado-iot-Raspi-Recorder"
 echo "Twitter @IngaSakimori"
 echo " "
 echo "Thank you!!（・∀・）b"
+echo " "
 
+exit 0
 
