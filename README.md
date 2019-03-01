@@ -89,6 +89,12 @@ copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved
 本ソフトウェアは無保証です。  
 ABSOLUTELY NO WARRANTY  
   
+SSHなどでログインする場合は以下のユーザ名とパスワードを使ってください。HDMIモニタをつなぐと認証なしでデスクトップが表示できます。  
+Login User/Pass is below.Connect HDMI Monitor, you can control Desktop Mode without Login.  
+  
+User:pi  
+Pass:piyo_piyo_fortress  
+  
 画質設定を変えたい場合は、デスクトップのリンクをクリックするか、/opt/ingado-iot-camera/commom.confを編集してください  
   
 $ sudo vi /opt/ingado-iot-camera/commom.conf  
