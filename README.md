@@ -15,6 +15,26 @@ Released @ ComicMarket 95(Winter 2019)
 Sample Video(motorcycle helmet mount)  
 https://twitter.com/IngaSakimori/status/1076787382295261184  
   
+
+# Getting Start (Very Easy!!)  
+  
+BitTorrentでOSのイメージファイルを配布しています。以下のリンクからtorrentファイルをダウンロードして、BitTorrentクライアントでイメージファイルをダウンロードしてください。  
+ダウンロードしたイメージファイルを「Win32 Disk Imager」や「DD for windows」などのイメージライティングソフトで16GB以上のMicro SDカードへ書き込んでください。  
+書き込んだMicro SDカードをあなたのRaspberry PI Zero/Zero W（Camera Unitを装着してください）へ取り付けて、電源を投入すればそのまま使用可能です。  
+大きな容量のSDカードを使う場合は[$ sudo raspi-config]を実行して、[7 Advanced Options]⇒[A1 Expand Filesystem]を実行してください。  
+  
+Download Raspbian Custom OS Image file via BitTorrent.  
+Get Image Writing Software.  
+Write image to MicroSD card(Over 16GB)  
+Insert Micro SD card to Raspberry PI Zero/Zero W（with Camera Unit)  
+Power on.Recording start automatically.  
+Run [$ sudo raspi-config]  
+Select [7 Advanced Options]  
+Select [A1 Expand Filesystem]  
+  
+Torrent File here
+https://www.inga-do.com/torrent/ingado-iot-raspi-recorder_C95_raspbian_stretch_20190301.torrent  
+  
 # Dependency  
 ## H/W  
 Raspberry PI Zero/Zero W and Camera Unit  
