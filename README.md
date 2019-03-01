@@ -74,18 +74,21 @@ Automatically moved recording files.
 (cron job runs background)  
   
 # Licence  
-本ソフトウェアはすべて無保証です  
-制作者が許可した場合を除き、商用利用を禁じます  
-犯罪に使用することを禁じます  
-普遍的自由を侵害し、第三者を抑圧する用途での利用を禁じます  
+デュアルライセンスです。  
+GPLバージョン3もしくはInga-Do Type IoT商用ライセンスを選択することができます。  
+特別な事情がない限り、GPLバージョン3を強く推奨します。  
   
-Kenzen Licence.  
-ABSOLUTELY NO WARRANTY.  
+This software is a dual license.  
+Please choose GPL version 3 license or Inga-Do Type IoT commercial license.  
+Unless there are special circumstances, it is strongly recommended to use GPL version 3 license.  
   
 # Authors  
 copylight 2019 Inga-do Type IoT/IngaSakimori All Rights Reserved  
   
 # Additional Info  
+本ソフトウェアは無保証です。  
+ABSOLUTELY NO WARRANTY  
+  
 画質設定を変えたい場合は、デスクトップのリンクをクリックするか、/opt/ingado-iot-camera/commom.confを編集してください  
   
 $ sudo vi /opt/ingado-iot-camera/commom.conf  
