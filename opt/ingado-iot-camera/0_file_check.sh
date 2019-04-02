@@ -55,7 +55,7 @@ else
     rm -f $SCRIPT_DIR/rec_convert/tmp/*.mp4
 
 #コンバート必要なファイルは最初にコンバートする
-    flock -e /tmp/6_convert_h264_to_mp4.lock $SCRIPT_DIR/6_convert_h264_to_mp4.sh &
+    flock -e /tmp/6_convert_h264_to_mp4.lock $SCRIPT_DIR/6_convert_h264_to_mp4.sh
 
 #USBメモリが刺さっていれば最初にバックグラウンドで移動させる
     flock -e /tmp/10_move_to_usb_memory_mp4s.lock $SCRIPT_DIR/10_move_to_usb_memory_mp4s.sh &
