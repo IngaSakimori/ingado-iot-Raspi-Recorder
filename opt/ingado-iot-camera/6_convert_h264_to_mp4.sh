@@ -23,6 +23,7 @@ sleep 10s
 #fi
 
 #残り容量が少ない場合はコンバートしない
+/bin/df / | /usr/bin/tail -1 | /bin/sed 's/^.* \([0-9]*\)%.*$/\1/' > $SCRIPT_DIR/disk_use_per.txt
 DISK_PER=$(<$SCRIPT_DIR/disk_use_per.txt)
 echo "$DISK_PER"
 
