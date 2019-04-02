@@ -65,3 +65,4 @@ do
     now_time=`date "+%Y%m%d-%H%M%S"`
     echo "$now_time ${FILENAME}.mp4 convert finished!!" >> $LOG_DIR/rec_script.log
 done
+
