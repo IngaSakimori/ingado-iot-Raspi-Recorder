@@ -22,6 +22,21 @@ sleep 10s
 #    exit 1
 #fi
 
+#残り容量が少ない場合はコンバートしない
+DISK_PER=$(<$SCRIPT_DIR/disk_use_per.txt)
+echo "$DISK_PER"
+
+#使用量が95パーより大きい場合は警告を送信し、処理を停止するが、USBメモリへの転送は行う
+if test $DISK_PER -gt $DISK_STOP_PER ; then
+    echo "DISK_FULL! convert process stopped." >> $LOG_DIR/rec_script.log
+    echo "DISK_FULL! convert process stopped." | mail -s "DISK_FULL!! convert process stopped." $MAIL_ADD
+    flock -e /tmp/10_move_to_usb_memory_mp4s.lock $SCRIPT_DIR/10_move_to_usb_memory_mp4s.sh &
+    exit 0
+#使用量が95パーより低ければ後続処理を開始する
+else
+   echo "contiune..."
+
+
 #USBメモリへ移動中は負荷を考慮し、コピーしない
 ANOTHER_SCRIPT=`ps aux | grep 10_move_to_usb_memory_mp4s.sh | grep -v grep`
 if [[ $ANOTHER_SCRIPT == *"10_move_to_usb_memory_mp4s"* ]]; then
