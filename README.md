@@ -20,7 +20,7 @@ https://twitter.com/IngaSakimori/status/1076787382295261184
   
 BitTorrentでOSのイメージファイルを配布しています。以下のリンクからtorrentファイルをダウンロードして、BitTorrentクライアントでイメージファイルをダウンロードしてください。  
 ダウンロードしたイメージファイルを「Win32 Disk Imager」や「DD for windows」などのイメージライティングソフトで16GB以上のMicro SDカードへ書き込んでください。  
-書き込んだMicro SDカードをあなたのRaspberry PI Zero/Zero W（Camera Unitを装着してください）へ取り付けて、電源を投入すればそのまま使用可能です。  
+書き込んだMicro SDカードをあなたのRaspberry PI（Camera Unitを装着してください）へ取り付けて、電源を投入すればそのまま使用可能です。  
 大きな容量のSDカードを使う場合は[$ sudo raspi-config]を実行して、[7 Advanced Options]⇒[A1 Expand Filesystem]を実行してください。  
   
 Download Raspbian Custom OS Image file via BitTorrent.  
@@ -37,13 +37,13 @@ https://www.inga-do.com/torrent/ingado-iot-raspi-recorder_C95_raspbian_stretch_2
   
 # Dependency  
 ## H/W  
-Raspberry PI Zero/Zero W and Camera Unit  
+Raspberry PI (Include Zero series)
 MicroSD Card (Recommend over 32GB)  
 ## S/W  
-Raspbian Stretch Offical Image  
+Raspbian Stretch Offical Image or Raspbian Bullseye Offical Image
   
 # Manually Setup  
-Raspbian StretchをクリーンインストールしたRaspberry PIで、raspi-configを実行し、「CAMERA」を有効にしてください。  
+Raspbian StretchもしくはBullseyeをクリーンインストールしたRaspberry PIで、raspi-configを実行し、「CAMERA」を有効にしてください。  
 任意のディレクトリにこのレポジトリをクローンするか  
 ZIPファイルでダウンロードして、/tmpなどに解凍して、セットアップスクリプトを実行してください。  
   
@@ -66,8 +66,8 @@ $ sudo cd ingado-iot-Raspi-Recorder
 $ sudo chmod 755 ./00_initial_copy.sh  
 $ sudo ./00_initial_copy.sh  
   
-*OS設定ファイルも含めて上書きしますので、他の用途に使用中のRaspberry PIではセットアップしないでください*  
-*Caution! Setup script will overwrite OS Setting.*  
+*OS設定ファイルも含めて上書きしますので、他の用途に使用中のRaspberry PIではバックアップを取得してから実行してください*  
+*Caution! Setup script will overwrite OS Setting.Strongly recommend backup current files and settings.*  
   
 # Usage  
 以下の資料を参照してください。これはコミケ95で頒布した際の資料です  
@@ -115,7 +115,7 @@ Login User/Pass is below.Connect HDMI Monitor, you can control Desktop Mode with
 User:pi  
 Pass:piyo_piyo_fortress  
   
-画質設定を変えたい場合は、デスクトップのリンクをクリックするか、/opt/ingado-iot-camera/commom.confを編集してください  
+画質設定を変えたい場合は、デスクトップの"Setting Edit"リンクをクリックするか、/opt/ingado-iot-camera/commom.confを編集してください  
   
 $ sudo vi /opt/ingado-iot-camera/commom.conf  
 You can change Video bit rate and FPS.  
