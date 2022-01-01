@@ -3,6 +3,6 @@ Encoding=UTF-8
 Type=Application
 Name=
 Name[ja_JP]=
-Exec=leafpad /opt/ingado-iot-camera/common.conf
+Exec=gvim -f /opt/ingado-iot-camera/common.conf
 Comment[ja_JP]=
 StartupNotify=true
