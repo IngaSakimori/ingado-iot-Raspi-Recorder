@@ -30,7 +30,7 @@ apt update
 echo "install some packages"
 echo " "
 
-apt install vim-gtk msmtp msmtp-mta bc lxshortcut xrdp firefox-esr -y
+apt install vim-gtk msmtp msmtp-mta mailutils bc lxshortcut xrdp firefox-esr -y
 
 echo "install sysstat. wait few minutes. If you are asked , select [Yes] "
 read -p "Hit enter: "
