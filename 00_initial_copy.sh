@@ -30,7 +30,7 @@ apt update
 echo "install some packages"
 echo " "
 
-apt install vim-gtk msmtp msmtp-mta　bsd-mailx bc lxshortcut xrdp firefox-esr -y
+apt install vim-gtk bc lxshortcut xrdp firefox-esr -y
 
 echo "install sysstat. wait few minutes. If you are asked , select [Yes] "
 read -p "Hit enter: "
@@ -39,6 +39,8 @@ apt install sysstat -y
 
 echo "enable xrdp. you can access RDP"
 echo " "
+
+apt install msmtp msmtp-mta　bsd-mailx -y
 
 systemctl enable xrdp
 
