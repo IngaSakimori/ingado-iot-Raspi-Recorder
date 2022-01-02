@@ -30,7 +30,7 @@ apt update
 echo "install some packages"
 echo " "
 
-apt install vim-gtk sendmail bc lxshortcut xrdp firefox-esr -y
+apt install vim-gtk mailutils mpack bsd-mailx bc lxshortcut xrdp firefox-esr -y
 
 echo "install sysstat. wait few minutes. If you are asked , select [Yes] "
 read -p "Hit enter: "
@@ -44,7 +44,7 @@ echo "メールプログラムをインストールします。すべてデフ�
 echo "Install MTA. press enter default."
 read -p "Press any key "
 
-apt install msmtp msmtp-mta bsd-mailx -y
+apt install msmtp msmtp-mta -y
 
 systemctl enable xrdp
 
