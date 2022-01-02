@@ -40,7 +40,11 @@ apt install sysstat -y
 echo "enable xrdp. you can access RDP"
 echo " "
 
-apt install sendmail msmtp msmtp-mta bsd-mailx -y
+echo "メールプログラムをインストールします。すべてデフォルト設定でEnterを押してください"
+echo "Install MTA. press enter default."
+read -p "Press any key "
+
+apt install msmtp msmtp-mta bsd-mailx -y
 
 systemctl enable xrdp
 
