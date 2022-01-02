@@ -15,13 +15,24 @@ source /opt/ingado-iot-camera/common.conf
 #スペシャルコマンドを実行したい場合はcommon.confに書く
 sudo $SP_COMMAND
 
-#メール設定を書き込み
-echo "hostname=$HOSTNAME" > /etc/ssmtp/ssmtp.conf
-echo "AuthUser=$SMTP_USER" >> /etc/ssmtp/ssmtp.conf
-echo "AuthPass=$SMTP_PASSWORD" >> /etc/ssmtp/ssmtp.conf
-echo "mailhub=$SMTP_SERVER" >> /etc/ssmtp/ssmtp.conf
-echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
-echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf
+#互換性のため、ssmtpとmstp双方へ設定書き出し
+  echo "hostname=$HOSTNAME" > /etc/ssmtp/ssmtp.conf
+  echo "AuthUser=$SMTP_USER" >> /etc/ssmtp/ssmtp.conf
+  echo "AuthPass=$SMTP_PASSWORD" >> /etc/ssmtp/ssmtp.conf
+  echo "mailhub=$SMTP_SERVER" >> /etc/ssmtp/ssmtp.conf
+  echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
+  echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf
+  echo "account default" > /etc/msmtprc
+  echo "host smtp.gmail.com" >> /etc/msmtprc
+  echo "port 587" >> /etc/msmtprc
+  echo "user $MAIL_ADD" >> /etc/msmtprc
+  echo "password $SMTP_PASSWORD" >> /etc/msmtprc
+  echo "from $SMTP_USER" >> /etc/msmtprc
+  echo "tls on" >> /etc/msmtprc
+  echo "tls_starttls on" >> /etc/msmtprc
+  echo "tls_certcheck off" >> /etc/msmtprc
+  echo "auth on" >> /etc/msmtprc
+  echo "syslog LOG_MAIL" >> /etc/msmtprc
 
 #USBメモリに録画停止ファイルがある場合は、録画を開始せずにエンコードを始める
 if [[ -f /media/pi/RASPI/stop_rec ]]; then
