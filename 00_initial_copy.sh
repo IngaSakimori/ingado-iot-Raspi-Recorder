@@ -40,7 +40,7 @@ apt install sysstat -y
 echo "enable xrdp. you can access RDP"
 echo " "
 
-apt install msmtp msmtp-mta　bsd-mailx -y
+apt install sendmail msmtp msmtp-mta bsd-mailx -y
 
 systemctl enable xrdp
 
