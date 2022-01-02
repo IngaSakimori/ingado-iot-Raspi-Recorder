@@ -8,10 +8,12 @@ Piyo-Piyo Fortress
 インターネットに接続されている場合、録画ファイルに自動で録画日時をつけてくれます  
 Gmailと連動して、録画開始や動作異常についてメール通知する機能も備えています  
   
-This is Auto Recording Script Set for Raspberry PI Zero/Zero W.  
+This is Auto Recording Script Set for Raspberry PI . 
 Send E-mail (via Gmail) when "Rec start", "DISK FULL" , "Find Faliure"  
-Released @ ComicMarket 95(Winter 2019)  
-  
+1st Released @ ComicMarket 95(Winter 2019)  
+2nd Released @ ComicMarket 96(Summer 2020)  
+3rd Released @ ComicMarket 99(Winter 2021)  
+
 Sample Video(motorcycle helmet mount)  
 https://twitter.com/IngaSakimori/status/1076787382295261184  
   
@@ -26,7 +28,7 @@ BitTorrentでOSのイメージファイルを配布しています。以下の�
 Download Raspbian Custom OS Image file via BitTorrent.  
 Get Image Writing Software.  
 Write image to MicroSD card(Over 16GB)  
-Insert Micro SD card to Raspberry PI Zero/Zero W（with Camera Unit)  
+Insert Micro SD card to Raspberry PI（with Camera Unit)  
 Power on.Recording start automatically.  
 Run [$ sudo raspi-config]  
 Select [7 Advanced Options]  
