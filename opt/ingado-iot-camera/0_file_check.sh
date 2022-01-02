@@ -52,12 +52,24 @@ if [[ -f /media/pi/RASPI/go_update ]]; then
   touch /media/pi/RASPI/update_success`date "+%Y%m%d_%H%M"`
   # メールが必ずしも飛ばせるとは限らないが、一応飛ばす
   date --set @$(timeout -sKILL 10 wget -q https://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p | cut -d. -f1)
+#互換性のため、ssmtpとmstp双方へ設定書き出し
   echo "hostname=$HOSTNAME" > /etc/ssmtp/ssmtp.conf
   echo "AuthUser=$SMTP_USER" >> /etc/ssmtp/ssmtp.conf
   echo "AuthPass=$SMTP_PASSWORD" >> /etc/ssmtp/ssmtp.conf
   echo "mailhub=$SMTP_SERVER" >> /etc/ssmtp/ssmtp.conf
   echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
   echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf
+  echo "account default" > /etc/msmtprc
+  echo "host smtp.gmail.com" >> /etc/msmtprc
+  echo "port 587" >> /etc/msmtprc
+  echo "user $MAIL_ADD" >> /etc/msmtprc
+  echo "password $SMTP_PASSWORD" >> /etc/msmtprc
+  echo "from $SMTP_USER" >> /etc/msmtprc
+  echo "tls on" >> /etc/msmtprc
+  echo "tls_starttls on" >> /etc/msmtprc
+  echo "tls_certcheck off" >> /etc/msmtprc
+  echo "auth on" >> /etc/msmtprc
+  echo "syslog LOG_MAIL" >> /etc/msmtprc
   source /opt/ingado-iot-camera/common.conf
   (echo -e "$HOSTNAME $now_time script and conf update completed!! System will reboot!! $MAILINFO" | mail -s "$HOSTNAME script and conf update completed!!  System will reboot!! $now_time" $MAIL_ADD)&
   echo "script and conf update completed!! $now_time system will reboot" >> $LOG_DIR/rec_script.log
@@ -81,12 +93,24 @@ if [ $NLLFLAG -eq 1 ]
   sed -i -e '/\s\/\s*ext4\s*defaults,noatime/s/defaults,noatime/sync,auto,dev,exec,nouser,rw,suid/' /etc/fstab
   # メールが必ずしも飛ばせるとは限らないが、一応飛ばす
   date --set @$(timeout -sKILL 10 wget -q https://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p | cut -d. -f1)
+#互換性のため、ssmtpとmstp双方へ設定書き出し
   echo "hostname=$HOSTNAME" > /etc/ssmtp/ssmtp.conf
   echo "AuthUser=$SMTP_USER" >> /etc/ssmtp/ssmtp.conf
   echo "AuthPass=$SMTP_PASSWORD" >> /etc/ssmtp/ssmtp.conf
   echo "mailhub=$SMTP_SERVER" >> /etc/ssmtp/ssmtp.conf
   echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
   echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf
+  echo "account default" > /etc/msmtprc
+  echo "host smtp.gmail.com" >> /etc/msmtprc
+  echo "port 587" >> /etc/msmtprc
+  echo "user $MAIL_ADD" >> /etc/msmtprc
+  echo "password $SMTP_PASSWORD" >> /etc/msmtprc
+  echo "from $SMTP_USER" >> /etc/msmtprc
+  echo "tls on" >> /etc/msmtprc
+  echo "tls_starttls on" >> /etc/msmtprc
+  echo "tls_certcheck off" >> /etc/msmtprc
+  echo "auth on" >> /etc/msmtprc
+  echo "syslog LOG_MAIL" >> /etc/msmtprc
   source /opt/ingado-iot-camera/common.conf
   (echo -e "$HOSTNAME $now_time NLL mode is active!! Change filesystem setting from default(aync) to sync. System will reboot $MAILINFO" | mail -s "$HOSTNAME NLL mode is active!! Change filesystem setting from default(aync) to sync. System will reboot $now_time" $MAIL_ADD)&
   echo "NLL mode is active!! Change filesystem setting from default(aync) to sync. $now_time System will reboot" >> $LOG_DIR/rec_script.log
@@ -114,12 +138,24 @@ if [ $NLLFLAG -eq 0 ]
   sed -i -e '/\s\/\s*ext4\s*sync,auto,dev,exec,nouser,rw,suid/s/sync,auto,dev,exec,nouser,rw,suid/defaults,noatime/' /etc/fstab
   # メールが必ずしも飛ばせるとは限らないが、一応飛ばす
   date --set @$(timeout -sKILL 10 wget -q https://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p | cut -d. -f1)
+#互換性のため、ssmtpとmstp双方へ設定書き出し
   echo "hostname=$HOSTNAME" > /etc/ssmtp/ssmtp.conf
   echo "AuthUser=$SMTP_USER" >> /etc/ssmtp/ssmtp.conf
   echo "AuthPass=$SMTP_PASSWORD" >> /etc/ssmtp/ssmtp.conf
   echo "mailhub=$SMTP_SERVER" >> /etc/ssmtp/ssmtp.conf
   echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
   echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf
+  echo "account default" > /etc/msmtprc
+  echo "host smtp.gmail.com" >> /etc/msmtprc
+  echo "port 587" >> /etc/msmtprc
+  echo "user $MAIL_ADD" >> /etc/msmtprc
+  echo "password $SMTP_PASSWORD" >> /etc/msmtprc
+  echo "from $SMTP_USER" >> /etc/msmtprc
+  echo "tls on" >> /etc/msmtprc
+  echo "tls_starttls on" >> /etc/msmtprc
+  echo "tls_certcheck off" >> /etc/msmtprc
+  echo "auth on" >> /etc/msmtprc
+  echo "syslog LOG_MAIL" >> /etc/msmtprc
   source /opt/ingado-iot-camera/common.conf
   (echo -e "$HOSTNAME $now_time NLL mode is not active!! Change filesystem setting from sync to default(aync). System will reboot $MAILINFO" | mail -s "$HOSTNAME NLL mode is not active!! Change filesystem setting from sync to default(aync). System will reboot $now_time" $MAIL_ADD)&
   echo "NLL mode is not active!! Change filesystem setting from sync to default(aync). $now_time System will reboot" >> $LOG_DIR/rec_script.log
