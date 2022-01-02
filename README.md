@@ -60,7 +60,7 @@ Enable CAMERA Unit.
   
 $ cd /tmp  
 $ sudo git clone https://github.com/IngaSakimori/ingado-iot-Raspi-Recorder.git  
-$ sudo cd ingado-iot-Raspi-Recorder  
+$ cd ingado-iot-Raspi-Recorder  
   
 次に以下のコマンドを実行してください  
 ## Run Initial Script  
