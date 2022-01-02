@@ -32,21 +32,13 @@ echo " "
 
 apt install vim-gtk msmtp msmtp-mta mailutils bc lxshortcut xrdp firefox-esr -y
 
-echo "install sysstat. wait few minutes. If you are asked , select [Yes] "
-read -p "Hit enter: "
-
 apt install sysstat -y
-
-echo "enable xrdp. you can access RDP"
-echo " "
-
-echo "メールプログラムをインストールします。すべてデフォルト設定でEnterを押してください"
-echo "Install MTA. press enter default."
-read -p "Press any key "
 
 apt install bsd-mailx -y
 
 systemctl enable xrdp
+
+echo "enable xrdp. you can access RDP"
 
 echo "set clipboard=unnamedplus" >> ~/.vimrc
 
