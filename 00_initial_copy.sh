@@ -87,6 +87,7 @@ chown root:root etc/default/sysstat
 chown root:root etc/logrotate.d/rsyslog
 chown root:root etc/modprobe.d/bcm2835-wdt.conf
 chown root:root etc/ssmtp/ssmtp.conf
+chown root:root etc/msmtprc
 chown root:root etc/systemd/system.conf
 #chown root:root etc/wpa_supplicant/wpa_supplicant.conf
 
@@ -95,6 +96,7 @@ mv -fv etc/default/sysstat /etc/default/sysstat
 mv -fv etc/logrotate.d/rsyslog /etc/logrotate.d/rsyslog
 mv -fv etc/modprobe.d/bcm2835-wdt.conf /etc/modprobe.d/bcm2835-wdt.conf
 mv -fv etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf
+mv -fv etc/msmtprc /etc/msmtprc
 mv -fv etc/systemd/system.conf /etc/systemd/system.conf
 #mv -fv etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
