@@ -121,7 +121,7 @@ mv -fv home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf /home/pi/.config/pcm
 
 chmod 777 var/log/rec_error.log
 chmod 777 var/log/rec_script.log
-chown pi:pi var/log/rec_script.log
+chown pi:pi var/log/rec_error.log
 chown pi:pi var/log/rec_script.log
 mv -fv var/log/rec_error.log /var/log/rec_error.log
 mv -fv var/log/rec_script.log /var/log/rec_script.log
