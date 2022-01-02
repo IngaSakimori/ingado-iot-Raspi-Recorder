@@ -30,7 +30,7 @@ apt update
 echo "install some packages"
 echo " "
 
-apt install vim-gtk ssmtp mailutils mpack bc lxshortcut xrdp firefox-esr -y
+apt install vim-gtk msmtp msmtp-mta　bsd-mailx bc lxshortcut xrdp firefox-esr -y
 
 echo "install sysstat. wait few minutes. If you are asked , select [Yes] "
 read -p "Hit enter: "
@@ -77,7 +77,8 @@ chmod 644 etc/cron.d/sysstat
 chmod 644 etc/default/sysstat
 chmod 644 etc/logrotate.d/rsyslog
 chmod 644 etc/modprobe.d/bcm2835-wdt.conf
-chmod 644 etc/ssmtp/ssmtp.conf
+chmod 600 etc/ssmtp/ssmtp.conf
+chmod 600 etc/msmtprc
 chmod 644 etc/systemd/system.conf
 #chmod 644 etc/wpa_supplicant/wpa_supplicant.conf
 
