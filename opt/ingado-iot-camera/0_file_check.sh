@@ -62,6 +62,7 @@ if [[ -f /media/pi/RASPI/go_update ]]; then
   echo "account default" > /etc/msmtprc
   echo "host smtp.gmail.com" >> /etc/msmtprc
   echo "port 587" >> /etc/msmtprc
+  echo "user $SMTP_USER" >> /etc/msmtprc
   echo "password $SMTP_PASSWORD" >> /etc/msmtprc
   echo "from $SMTP_USER" >> /etc/msmtprc
   echo "tls on" >> /etc/msmtprc
@@ -102,6 +103,7 @@ if [ $NLLFLAG -eq 1 ]
   echo "account default" > /etc/msmtprc
   echo "host smtp.gmail.com" >> /etc/msmtprc
   echo "port 587" >> /etc/msmtprc
+  echo "user $SMTP_USER" >> /etc/msmtprc
   echo "password $SMTP_PASSWORD" >> /etc/msmtprc
   echo "from $SMTP_USER" >> /etc/msmtprc
   echo "tls on" >> /etc/msmtprc
@@ -146,6 +148,7 @@ if [ $NLLFLAG -eq 0 ]
   echo "account default" > /etc/msmtprc
   echo "host smtp.gmail.com" >> /etc/msmtprc
   echo "port 587" >> /etc/msmtprc
+  echo "user $SMTP_USER" >> /etc/msmtprc
   echo "password $SMTP_PASSWORD" >> /etc/msmtprc
   echo "from $SMTP_USER" >> /etc/msmtprc
   echo "tls on" >> /etc/msmtprc
