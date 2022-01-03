@@ -25,7 +25,6 @@ sudo $SP_COMMAND
   echo "account default" > /etc/msmtprc
   echo "host smtp.gmail.com" >> /etc/msmtprc
   echo "port 587" >> /etc/msmtprc
-  echo "user $MAIL_ADD" >> /etc/msmtprc
   echo "password $SMTP_PASSWORD" >> /etc/msmtprc
   echo "from $SMTP_USER" >> /etc/msmtprc
   echo "tls on" >> /etc/msmtprc
