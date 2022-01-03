@@ -51,6 +51,7 @@ mkdir -p /opt/ingado-iot-camera/rec
 mkdir -p /opt/ingado-iot-camera/rec_convert
 mkdir -p /opt/ingado-iot-camera/rec_h264
 mkdir -p /opt/ingado-iot-camera/rec_convert/tmp
+mkdir -p /etc/ssmtp/
 mv -fv opt/ingado-iot-camera/*.sh /opt/ingado-iot-camera
 mv -fv opt/ingado-iot-camera/*.conf /opt/ingado-iot-camera
 chown -R pi:pi /opt/ingado-iot-camera
